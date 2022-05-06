@@ -8,6 +8,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PersonalInfoComponent } from './pages/sign-up/personal-info/personal-info.component';
+import { UserInfoComponent } from './pages/sign-up/user-info/user-info.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { ItemPipe } from './item.pipe';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
+import { AlertButtonComponent } from './alert-button/alert-button.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +23,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     HomeComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    PersonalInfoComponent,
+    UserInfoComponent,
+    ItemPipe,
+    ParentComponent,
+    ChildComponent,
+    AlertButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

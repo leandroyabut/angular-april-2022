@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-body">
+
+    <h5 class="card-title">Personal Information</h5>
+
+    <form [formGroup]="signUpForm">
+
+      <div class="form-floating my-2">
+        <input type="text" formControlName="firstName" id="firstName" class="form-control" placeholder="First Name"/>
+        <label for="firstName" class="form-label">First Name</label>
+      </div>
+
+      <div class="form-floating my-2">
+        <input type="text" formControlName="lastName" id="lastName" class="form-control" placeholder="Last Name"/>
+        <label for="lastName" class="form-label">Last Name</label>
+      </div>
+
+      <div class="form-floating my-2">
+        <input type="text" class="form-control" id="email" formControlName="email" placeholder="Email"/>
+        <label for="email" class="form-label">Email</label>
+      </div>
+
+    </form>
+
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary" routerLink="/sign-up/user-info">Next: User Information</button>
+    </div>
+
+  </div>
+</div>

@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
 import {LoginComponent} from './pages/login/login.component';
-import {SignUpComponent} from './pages/sign-up/sign-up.component';
+import {PersonalInfoComponent} from './pages/sign-up/personal-info/personal-info.component';
+import {UserInfoComponent} from './pages/sign-up/user-info/user-info.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,21 @@ const routes: Routes = [
   },
   {
     path: "sign-up",
-    component: SignUpComponent
+    children: [
+      {
+        path: "",
+        pathMatch: "full",
+        redirectTo: "personal-info"
+      },
+      {
+        path: "personal-info",
+        component: PersonalInfoComponent
+      },
+      {
+        path: "user-info",
+        component: UserInfoComponent
+      }
+    ]
   }
 ];
 
