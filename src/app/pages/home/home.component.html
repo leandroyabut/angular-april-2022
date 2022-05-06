@@ -1,5 +1,13 @@
 <div class="container my-5">
 
+  <div *appNot="false" class="alert alert-warning">
+    What's up bro
+  </div>
+
+  <div class="mb-5">
+    <app-alert-button alertMessage="This is a test message."></app-alert-button>
+  </div>
+
   <div class="my-5">
     <app-child *ngFor="let item of cart.items" [item]="item"></app-child>
   </div>

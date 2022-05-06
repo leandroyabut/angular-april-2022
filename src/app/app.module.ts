@@ -15,7 +15,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { ItemPipe } from './item.pipe';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
-import { AlertButtonComponent } from './alert-button/alert-button.component';
+import {AlertButtonComponent} from './components/alert-button/alert-button.component';
+import { NotDirective } from './not.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AlertButtonComponent } from './alert-button/alert-button.component';
     ItemPipe,
     ParentComponent,
     ChildComponent,
-    AlertButtonComponent
+    AlertButtonComponent,
+    NotDirective
   ],
   imports: [
     BrowserModule,

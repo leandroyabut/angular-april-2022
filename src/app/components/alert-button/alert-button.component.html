@@ -1,0 +1,6 @@
+<div class="text-center">
+  <div *ngIf="showing" class="alert alert-primary mb-4">
+    <p>{{alertMessage}}</p>
+  </div>
+  <button class="btn btn-primary" type="button" (click)="toggleShowing()">Toggle Alert</button>
+</div>
